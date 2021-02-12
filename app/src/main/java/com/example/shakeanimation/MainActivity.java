@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         ButterKnife.bind(this);
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -42,25 +40,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
     }
-        @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
-            getMenuInflater().inflate(R.menu.menu_main, menu);
-            return true;
-        }
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            int id = item.getItemId();
-            ExampleFragment f = (ExampleFragment)getSupportFragmentManager().findFragmentById(R.id.layout_main);
-            switch (id) {
-                case R.id.style_cube:
-                    f.setAnimationStyle(ExampleFragment.CUBE);
-                    return true;
-                case R.id.style_flip:
-                    f.setAnimationStyle(ExampleFragment.FLIP);
-                    return true;
-            }
-            return super.onOptionsItemSelected(item);
-        }
 
     //listener 등록과 해제 - 배터리 소모를 생각함
     @Override
@@ -100,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 }
                 mShakeTime = currentTime;
                 ExampleFragment mf = (ExampleFragment) getSupportFragmentManager().findFragmentById(R.id.layout_main);
+                //왼쪽으로 돌리기
                 mf.onButtonLeft();
             }
         }
