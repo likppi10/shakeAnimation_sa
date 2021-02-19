@@ -96,7 +96,7 @@ public class ExampleFragment extends Fragment {
     void onButtonUp() {
         getArguments().putInt("direction", UP);
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.layout_main, ExampleFragment.newInstance(UP));
+        ft.replace(R.id.layout_fragment, ExampleFragment.newInstance(UP));
         ft.commit();
     }
 
@@ -105,7 +105,7 @@ public class ExampleFragment extends Fragment {
     void onButtonDown() {
         getArguments().putInt("direction", DOWN);
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.layout_main, ExampleFragment.newInstance(DOWN));
+        ft.replace(R.id.layout_fragment, ExampleFragment.newInstance(DOWN));
         ft.commit();
     }
 
@@ -114,7 +114,7 @@ public class ExampleFragment extends Fragment {
     void onButtonLeft() {
         getArguments().putInt("direction", LEFT);
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.layout_main, ExampleFragment.newInstance(LEFT));
+        ft.replace(R.id.layout_fragment, ExampleFragment.newInstance(LEFT));
         ft.commit();
     }
 
@@ -123,7 +123,7 @@ public class ExampleFragment extends Fragment {
     void onButtonRight() {
         getArguments().putInt("direction", RIGHT);
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.layout_main, ExampleFragment.newInstance(RIGHT));
+        ft.replace(R.id.layout_fragment, ExampleFragment.newInstance(RIGHT));
         ft.commit();
     }
 
