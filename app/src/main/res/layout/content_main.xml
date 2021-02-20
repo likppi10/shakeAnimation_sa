@@ -14,11 +14,17 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <FrameLayout
+    <com.example.shakeanimation.CustomLayout
         android:id="@+id/layout_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="32dp"
         android:layout_centerInParent="true"/>
+<!--    <FrameLayout-->
+<!--        android:id="@+id/layout_fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_margin="32dp"/>-->
+
 
 </RelativeLayout>

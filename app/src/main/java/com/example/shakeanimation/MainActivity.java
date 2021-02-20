@@ -25,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.layout_fragment, ExampleFragment.newInstance(ExampleFragment.NODIR));
+        ft.replace(R.id.layout_fragment, CustomLayout.newInstance(CustomLayout.NODIR));
         ft.commit();
+//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//        ft.replace(R.id.layout_fragment, ExampleFragment.newInstance(ExampleFragment.NODIR));
+//        ft.commit();
+
     }
 }
